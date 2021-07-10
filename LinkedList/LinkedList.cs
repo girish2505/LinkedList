@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedList
 {
-    class LinkedList
+    public class MyLinkedList
     {
         Node head;
         public void InsertAtEnd(int data)
@@ -97,6 +97,29 @@ namespace LinkedList
                     temp = temp.next;
                 }
                 temp.next = null;
+            }
+        }
+        public int SearchNode(int val)
+        {
+            Node temp = this.head;
+            int count = 0, Flag= 0;
+            while (temp != null)
+            {
+                count++;
+                if (temp.data == val)
+                {
+                    Flag = 1;
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (Flag == 1)
+            {
+                return count;
+            }
+            else
+            {
+                return 0;
             }
         }
     }
