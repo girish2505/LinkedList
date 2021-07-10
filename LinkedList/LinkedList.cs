@@ -7,7 +7,7 @@ namespace LinkedList
     class LinkedList
     {
         Node head;
-        public void Add(int data)
+        public void InsertAtEnd(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -32,7 +32,7 @@ namespace LinkedList
             {
                 if (temp.next != null)
                 {
-                    Console.Write($" {temp.data} ");
+                    Console.Write($"{temp.data} ");
                 }
                 else
                 {
