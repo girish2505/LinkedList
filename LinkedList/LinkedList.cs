@@ -70,5 +70,17 @@ namespace LinkedList
             prev.next = node;
             node.next = temp;
         }
+        public void DeleteFirst()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No element in Linked list");
+            }
+            else
+            {
+                Console.WriteLine("After deletion of the first element:");
+                head = head.next;
+            }
+        }
     }
 }
