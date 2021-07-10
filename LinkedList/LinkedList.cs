@@ -57,5 +57,18 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        public void InsertAtPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            Node temp = this.head;
+            Node prev = null;
+            for (int i = 1; i < position && temp != null; i++)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            prev.next = node;
+            node.next = temp;
+        }
     }
 }
