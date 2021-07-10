@@ -16,6 +16,9 @@ namespace LinkedList
             int pos = Convert.ToInt32(Console.ReadLine());
             list.InsertAtPosition(pos,40);
             list.Display();
+            Console.WriteLine("After deleting the inserted value");
+            list.DeleteNode(40);
+            list.Display();
         }
     }
 }

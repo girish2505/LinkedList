@@ -122,5 +122,45 @@ namespace LinkedList
                 return 0;
             }
         }
+        public void DeleteNode(int value)
+        {
+            if (head != null)
+            {
+                Node temp = head;
+                Node prev = null;
+                while (temp != null)
+                {
+                    if (temp.data == value)
+                    {
+                        prev.next = temp.next;
+                        break;
+                    }
+                    prev = temp;
+                    temp = temp.next;
+                }
+            }
+            else
+            {
+                Console.WriteLine("No elements to present in linked list");
+            }
+        }
+        public int Size()
+        {
+            if (head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Node temp = head;
+                int count = 0;
+                while (temp != null)
+                {
+                    count++;
+                    temp = temp.next;
+                }
+                return count;
+            }
+        }
     }
 }
