@@ -25,6 +25,21 @@ namespace LinkedList
             }
             Console.WriteLine("{0} Inserted into linked list",node.data);
         }
+        public void InsertAtBeginning(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                node.next = this.head;
+                this.head = node;
+            }
+            Console.WriteLine("{0} Inserted into linked list", node.data);
+        }
+
         public void Display()
         {
             Node temp = this.head;

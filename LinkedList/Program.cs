@@ -8,9 +8,9 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to Linked List implementation!");
             LinkedList list = new LinkedList();
-            list.InsertAtEnd(56);
-            list.InsertAtEnd(30);
-            list.InsertAtEnd(70);
+            list.InsertAtBeginning(56);
+            list.InsertAtBeginning(30);
+            list.InsertAtBeginning(70);
             list.Display();
         }
     }
