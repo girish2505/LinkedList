@@ -23,7 +23,7 @@ namespace LinkedList
                 }
                 traverse.next = node;
             }
-            Console.WriteLine("{0} Inserted into linked list",node.data);
+            Console.WriteLine("{0} Inserted into linked list", node.data);
         }
         public void InsertAtBeginning(int data)
         {
@@ -51,7 +51,7 @@ namespace LinkedList
                 }
                 else
                 {
-                    Console.WriteLine( temp.data );
+                    Console.WriteLine(temp.data);
                 }
 
                 temp = temp.next;
@@ -80,6 +80,23 @@ namespace LinkedList
             {
                 Console.WriteLine("After deletion of the first element:");
                 head = head.next;
+            }
+        }
+        public void DeleteAtLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No element in the list");
+            }
+            else
+            {
+                Node temp = head;
+
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
             }
         }
     }
