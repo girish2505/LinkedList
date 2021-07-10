@@ -19,9 +19,11 @@ namespace TestProject1
             list.InsertAtEnd(56);
             list.InsertAtEnd(30);
             list.InsertAtEnd(70);
-            int actual = list.SearchNode(30);
-            int expect = 2;
-            Assert.AreEqual(actual, expect);
+            int position = list.SearchNode(30);
+            if (position > 0)
+            {
+                list.InsertAtPosition(position + 1,40);
+            }
         }
     }
 }

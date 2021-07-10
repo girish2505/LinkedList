@@ -12,6 +12,10 @@ namespace LinkedList
             list.InsertAtEnd(30);
             list.InsertAtEnd(70);
             list.Display();
+            Console.WriteLine("Enter position");
+            int pos = Convert.ToInt32(Console.ReadLine());
+            list.InsertAtPosition(pos,40);
+            list.Display();
         }
     }
 }
